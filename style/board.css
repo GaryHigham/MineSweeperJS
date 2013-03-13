@@ -1,0 +1,8 @@
+#board 
+{
+	outline-style: solid;
+	outline-width: 5px;
+	outline-color: #00ff00;
+	width: 500px;
+	height: 500px;	
+}
