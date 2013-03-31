@@ -79,3 +79,4 @@ DEPENDENCIES
   cucumber-rails
   rails
   rspec-rails
+  selenium-webdriver

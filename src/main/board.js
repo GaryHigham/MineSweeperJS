@@ -5,15 +5,19 @@ define("main/board",
 		function Board() {
 			this.outputElement = document.createElement('div');
 			this.outputElement.id = 'Board';
-			this.cells = new Array();
+			this._cells = new Array();
 		}
 		
 		Board.prototype = {
 			
 			startGame: function() {
 				for(var i = 0; i < 64; ++i) {
-					this.addCell();	
+					this._addCell();	
 				}
+			},
+
+			_addCell: function() {
+				this._cells.push(new Cell());
 			},
 			
 			getOutputElement: function() {
@@ -29,22 +33,18 @@ define("main/board",
 			},
 			
 			getCells: function() {
-				return this.cells;
+				return this._cells;
 			},
 			
 			render: function() {
 				document.body.insertBefore(this.outputElement, document.body.firstChild);
 				for(var i = 0; i < 64; ++i) {
-					this._renderCell(this.cells[i]);
+					this._renderCell(this._cells[i]);
 				}
 			},
 			
 			_renderCell: function(cell) {
-				
-			},
-			
-			addCell: function() {
-				this.cells.push(new Cell());
+				cell.render(this.getOutputElement());	
 			}
 		
 		};

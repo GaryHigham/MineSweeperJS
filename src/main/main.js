@@ -10,6 +10,5 @@ require(["main/minesweeperapplication", "main/board"],
 		var board = new Board();
 		board.startGame();
 		var app = new MineSweeperApplication(board);
-		app.start();
 	}
 );

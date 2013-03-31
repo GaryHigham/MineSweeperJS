@@ -1,5 +1,5 @@
 require 'capybara/cucumber'
-Capybara.app_host = 'http://192.168.0.20/~garyhigham/minesweeperjs'
+Capybara.app_host = 'http://localhost/~gary/minesweeperjs/'
 
 
 Given /^I start a game of MineSweeper$/ do
